@@ -26,4 +26,13 @@ window.onload = function () {
     document.getElementById('fact_output').innerHTML = factorial(n);
   }
   document.getElementById('fact_submit').onclick = doFactorial;
+
+  var mwjs = new MediaWikiJS('https://en.wikipedia.org', {action: 'query',
+      prop: 'revisions', titles: 'Main Page'}, function (data) {
+      'use strict';
+      var pages = data.query.pages;
+      var textdata = document.getElementById('wiki_info');
+      textdata.innerHTML = ('Main page of Wikipedia last edited by: ' + pages[Object.keys(pages
+        )[0]].revisions[0].user);
+      });
 };
