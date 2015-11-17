@@ -4,7 +4,7 @@
   "name": "Wikipedia Extension",
   "description": "Looks for common words on the current page and searches Wikipedia for related articles",
   "version": "0.0",
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://en.wikipedia.org; object-src 'self'",
 
   "browser_action": {
     "default_icon": "my_icon.png",
