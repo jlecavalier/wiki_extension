@@ -1,3 +1,5 @@
+console.log("Popup initialized.");
+
 window.onload = function () {
   function changeImage() {
     var image = document.getElementById('fractal');
@@ -9,4 +11,19 @@ window.onload = function () {
     }
   }
   document.getElementById('fractal').onclick = changeImage;
+
+  function factorial(n) {
+    if (n == 0) {
+      return 1;
+    }
+    else {
+      return n * factorial(n - 1);
+    }
+  }
+
+  function doFactorial() {
+    var n = document.getElementById('fact_input').value;
+    document.getElementById('fact_output').innterHTML = factorial(n);
+  }
+  document.getElementById('fact_submit').onclick = doFactorial;
 };
