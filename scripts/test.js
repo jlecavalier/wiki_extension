@@ -23,7 +23,7 @@ window.onload = function () {
 
   function doFactorial() {
     var n = document.getElementById('fact_input').value;
-    document.getElementById('fact_output').innterHTML = factorial(n);
+    document.getElementById('fact_output').innerHTML = factorial(n);
   }
   document.getElementById('fact_submit').onclick = doFactorial;
 };
